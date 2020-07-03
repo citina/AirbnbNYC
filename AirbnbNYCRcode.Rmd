@@ -254,7 +254,7 @@ wordcloud(words = names(wordFreq), freq=wordFreq, min.freq=300, random.order=F, 
 library(corrplot)
 library(RColorBrewer)
 corr = round(cor(airbnb_nyc_clean[, unlist(lapply(airbnb_nyc_clean, is.numeric))]), 3)
-corrplot(corr, order = "hclust", type = "lower", 
+corrplot(corr, order = "hclust", type = "lower", title = "Correlation Between Variables",
          col=brewer.pal(n=8, name="RdYlBu"), tl.cex = 0.7, tl.srt = 45)
 ```
 
